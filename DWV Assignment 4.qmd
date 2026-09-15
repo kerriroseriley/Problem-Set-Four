@@ -3,12 +3,26 @@ title: "DWV Assignment 4"
 format: html
 ---
 
-Part One: Lines
+## Part One: Lines
 ```{r}
+# Draw the line y=4x+3 on a plot that ranges (-20,20) on both axises
+
 
 ```
 
-Part Two: Protected Lands
+```{r}
+# Label the line appropriately next to itself
+
+```
+
+
+```{r}
+# Label the line in an interesting color and make it dashed
+
+```
+
+
+## Part Two: Protected Lands
 
 Question 1
 ```{r}
