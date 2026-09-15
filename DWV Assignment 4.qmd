@@ -3,10 +3,6 @@ title: "DWV Assignment 4"
 format: html
 ---
 
-```{r}
-library.install("tidyverse")
-```
-
 Part One: Lines
 ```{r}
 
