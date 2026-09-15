@@ -5,19 +5,13 @@ format: html
 
 ## Part One: Lines
 ```{r}
-# Draw the line y=4x+3 on a plot that ranges (-20,20) on both axises
+# Q1: Draw the line y=4x+3 on a plot that ranges (-20,20) on both axis
 
 
-```
-
-```{r}
-# Label the line appropriately next to itself
-
-```
+# Q2: Label the line appropriately next to itself
 
 
-```{r}
-# Label the line in an interesting color and make it dashed
+# Q3: Label the line in an interesting color and make it dashed
 
 ```
 
@@ -29,49 +23,26 @@ Question 1
 # Read the data 
 data <- read.csv("~/Documents/PAI741/Problem Set Four/data/protected_lands.csv")
 
-# Find mean, standard deviation and range of each variable: protected_lands, gdp_percap, tot_gdp_billions
+
+# Q1: Find mean, standard deviation and range of each variable: protected_lands, gdp_percap, tot_gdp_billions
 
 
-```
-
-Question 2
-```{r}
-# Create scatterplot where "protected_lands on y, gdp_percap is on x. Include title and labels on axises
+# Q2: Create scatterplot where "protected_lands on y, gdp_percap is on x. Include title and labels on axises
 
 
-```
-
-Question 3
-```{r}
-# Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Include title and labels on axises
+# Q3: Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Include title and labels on axises
 
 
-```
-
-Question 4
-```{r}
-# Regress protected_lands on gdp_percap
+# Q4: Regress protected_lands on gdp_percap
 
 
-```
-
-Question 5
-```{r}
-# Create scatterplot where protected_lands on y, gdp_percap is on x. Include title and labels on axises
+# Q5: Create scatterplot where protected_lands on y, gdp_percap is on x. Include title and labels on axises
 
 
-```
-
-Question 6
-```{r}
-# Regress protected_lands on tot_gdp_billions
+# Q6: Regress protected_lands on tot_gdp_billions
 
 
-```
-
-Question 7
-```{r}
-# Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Overlay plot with best fit line
+# Q7: Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Overlay plot with best fit line
 
 
 ```
