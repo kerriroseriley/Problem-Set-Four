@@ -18,7 +18,7 @@ Part Two: Protected Lands
 Question 1
 ```{r}
 # Read the data 
-data <- read.csv("~/Documents/PAI741/Problem Set Four/protected_lands.csv")
+data <- read.csv("~/Documents/PAI741/Problem Set Four/data/protected_lands.csv")
 
 # Find mean, standard deviation and range of each variable: Protected Lands, gdp_percap, tot_gdp_billions
 
@@ -27,42 +27,42 @@ data <- read.csv("~/Documents/PAI741/Problem Set Four/protected_lands.csv")
 
 Question 2
 ```{r}
-# Create scatterplot where "protected lands" on y, gdp_percap is on x. Include title and labels on axises
+# Create scatterplot where "protected_lands on y, gdp_percap is on x. Include title and labels on axises
 
 
 ```
 
 Question 3
 ```{r}
-# Create scatterplot where "protected lands" on y, tot_gdp_billions is on x. Include title and labels on axises
+# Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Include title and labels on axises
 
 
 ```
 
 Question 4
 ```{r}
-# Regress "protected lands" on gdp_percap
+# Regress protected_lands on gdp_percap
 
 
 ```
 
 Question 5
 ```{r}
-# Create scatterplot where "protected lands" on y, gdp_percap is on x. Include title and labels on axises
+# Create scatterplot where protected_lands on y, gdp_percap is on x. Include title and labels on axises
 
 
 ```
 
 Question 6
 ```{r}
-# Regress "protected lands" on tot_gdp_billions
+# Regress protected_lands on tot_gdp_billions
 
 
 ```
 
 Question 7
 ```{r}
-# Create scatterplot where "protected lands" on y, tot_gdp_billions is on x. Overlay plot with best fit line
+# Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Overlay plot with best fit line
 
 
 ```
