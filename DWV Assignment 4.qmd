@@ -15,7 +15,7 @@ Question 1
 # Read the data 
 data <- read.csv("~/Documents/PAI741/Problem Set Four/data/protected_lands.csv")
 
-# Find mean, standard deviation and range of each variable: Protected Lands, gdp_percap, tot_gdp_billions
+# Find mean, standard deviation and range of each variable: protected_lands, gdp_percap, tot_gdp_billions
 
 
 ```
