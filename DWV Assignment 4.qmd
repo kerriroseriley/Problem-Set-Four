@@ -1,25 +1,72 @@
 ---
 title: "DWV Assignment 4"
+auhtor:Kerri Riley
 format: html
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r}
-1 + 1
+library.install("tidyverse")
 ```
 
-You can add options to executable code like this 
-
+Part One: Lines
 ```{r}
-#| echo: false
-2 * 2
+
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+Part Two: Protected Lands
+
+Question 1
+```{r}
+# Read the data 
+data <- read.csv("~/Documents/PAI741/Problem Set Four/protected_lands.csv")
+
+# Find mean, standard deviation and range of each variable: Protected Lands, gdp_percap, tot_gdp_billions
+
+
+```
+
+Question 2
+```{r}
+# Create scatterplot where "protected lands" on y, gdp_percap is on x. Include title and labels on axises
+
+
+```
+
+Question 3
+```{r}
+# Create scatterplot where "protected lands" on y, tot_gdp_billions is on x. Include title and labels on axises
+
+
+```
+
+Question 4
+```{r}
+# Regress "protected lands" on gdp_percap
+
+
+```
+
+Question 5
+```{r}
+# Create scatterplot where "protected lands" on y, gdp_percap is on x. Include title and labels on axises
+
+
+```
+
+Question 6
+```{r}
+# Regress "protected lands" on tot_gdp_billions
+
+
+```
+
+Question 7
+```{r}
+# Create scatterplot where "protected lands" on y, tot_gdp_billions is on x. Overlay plot with best fit line
+
+
+```
+
+
+
+
