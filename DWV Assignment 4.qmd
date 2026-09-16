@@ -5,24 +5,24 @@ format: html
 
 ## Part One: Lines
 ```{r}
-# Q1: Draw the line y=4x+3 on a plot that ranges (-20,20) on both axes
 
-plot(NULL,
-     xlim = c(-20, 20),
-     ylim = c(-20, 20),
-     xlab = "x",
-     ylab = "y",
-     main = "Line: y = 4x + 3")
+library(ggplot2)
+library(dplyr)
 
-abline(a = 3, b = 4)
-
-
-# Q2: Label the line appropriately next to itself
-text(x = 3, y = 15, labels = "y = 4x + 3", pos = 4)
-
-
-# Q3: Color the line in an interesting color and make it dashed
-abline(a = 3, b = 4, col = "purple", lty = 2, lwd = 2)
+# Q1, Q2, Q3
+ggplot() +
+  geom_abline(intercept = 3, slope = 4,
+              color = "purple",
+              linetype = "dashed") +
+  annotate("text", x = 2, y = 15,
+           label = "y = 4x + 3") +
+  xlim(-20, 20) +
+  ylim(-20, 20) +
+  labs(
+    title = "Line: y = 4x + 3",
+    x = "x",
+    y = "y"
+  )
 
 ```
 
@@ -49,9 +49,9 @@ sd(data$gdp_percap)
 range(data$gdp_percap)
 
 # tot_gdp_billions
-mean(data$tot_gdp_billions)
-sd(data$tot_gdp_billions)
-range(data$tot_gdp_billions)
+mean(data$tot_gdp_bilions)
+sd(data$tot_gdp_bilions)
+range(data$tot_gdp_bilions)
 
 
 # Q2: Create scatterplot where protected_lands is on y,
@@ -67,7 +67,7 @@ plot(data$gdp_percap, data$protected_lands,
 # Q3: Create scatterplot where protected_lands is on y,
 # tot_gdp_billions is on x. Include title and axis labels
 
-plot(data$tot_gdp_billions, data$protected_lands,
+plot(data$tot_gdp_bilions, data$protected_lands,
      main = "Protected Lands and Total GDP",
      xlab = "Total GDP (Billions)",
      ylab = "Protected Lands",
@@ -95,7 +95,7 @@ abline(model1, col = "blue", lwd = 2)
 
 # Q6: Regress protected_lands on tot_gdp_billions
 
-model2 <- lm(protected_lands ~ tot_gdp_billions, data = data)
+model2 <- lm(protected_lands ~ tot_gdp_bilions, data = data)
 
 summary(model2)
 
@@ -103,7 +103,7 @@ summary(model2)
 # Q7: Create scatterplot where protected_lands is on y,
 # tot_gdp_billions is on x. Overlay plot with best fit line
 
-plot(data$tot_gdp_billions, data$protected_lands,
+plot(data$tot_gdp_bilions, data$protected_lands,
      main = "Protected Lands and Total GDP",
      xlab = "Total GDP (Billions)",
      ylab = "Protected Lands",
