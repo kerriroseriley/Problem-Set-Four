@@ -6,6 +6,7 @@ format: html
 ## Part One: Lines
 ```{r}
 # Q1: Draw the line y=4x+3 on a plot that ranges (-20,20) on both axes
+
 plot(NULL,
      xlim = c(-20, 20),
      ylim = c(-20, 20),
@@ -37,17 +38,20 @@ data <- read.csv("~/Documents/PAI741/Problem Set Four/data/protected_lands.csv")
 # Q1: Find mean, standard deviation and range of each variable:
 # protected_lands, gdp_percap, tot_gdp_billions
 
-mean(data$protected_lands, na.rm = TRUE)
-sd(data$protected_lands, na.rm = TRUE)
-range(data$protected_lands, na.rm = TRUE)
+# protected_lands
+mean(data$protected_lands)
+sd(data$protected_lands)
+range(data$protected_lands)
 
-mean(data$gdp_percap, na.rm = TRUE)
-sd(data$gdp_percap, na.rm = TRUE)
-range(data$gdp_percap, na.rm = TRUE)
+# gdp_percap
+mean(data$gdp_percap)
+sd(data$gdp_percap)
+range(data$gdp_percap)
 
-mean(data$tot_gdp_billions, na.rm = TRUE)
-sd(data$tot_gdp_billions, na.rm = TRUE)
-range(data$tot_gdp_billions, na.rm = TRUE)
+# tot_gdp_billions
+mean(data$tot_gdp_billions)
+sd(data$tot_gdp_billions)
+range(data$tot_gdp_billions)
 
 
 # Q2: Create scatterplot where protected_lands is on y,
