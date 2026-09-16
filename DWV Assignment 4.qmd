@@ -5,13 +5,23 @@ format: html
 
 ## Part One: Lines
 ```{r}
-# Q1: Draw the line y=4x+3 on a plot that ranges (-20,20) on both axis
+# Q1: Draw the line y=4x+3 on a plot that ranges (-20,20) on both axes
+plot(NULL,
+     xlim = c(-20, 20),
+     ylim = c(-20, 20),
+     xlab = "x",
+     ylab = "y",
+     main = "Line: y = 4x + 3")
+
+abline(a = 3, b = 4)
 
 
 # Q2: Label the line appropriately next to itself
+text(x = 3, y = 15, labels = "y = 4x + 3", pos = 4)
 
 
-# Q3: Label the line in an interesting color and make it dashed
+# Q3: Color the line in an interesting color and make it dashed
+abline(a = 3, b = 4, col = "purple", lty = 2, lwd = 2)
 
 ```
 
@@ -24,27 +34,78 @@ Question 1
 data <- read.csv("~/Documents/PAI741/Problem Set Four/data/protected_lands.csv")
 
 
-# Q1: Find mean, standard deviation and range of each variable: protected_lands, gdp_percap, tot_gdp_billions
+# Q1: Find mean, standard deviation and range of each variable:
+# protected_lands, gdp_percap, tot_gdp_billions
+
+mean(data$protected_lands, na.rm = TRUE)
+sd(data$protected_lands, na.rm = TRUE)
+range(data$protected_lands, na.rm = TRUE)
+
+mean(data$gdp_percap, na.rm = TRUE)
+sd(data$gdp_percap, na.rm = TRUE)
+range(data$gdp_percap, na.rm = TRUE)
+
+mean(data$tot_gdp_billions, na.rm = TRUE)
+sd(data$tot_gdp_billions, na.rm = TRUE)
+range(data$tot_gdp_billions, na.rm = TRUE)
 
 
-# Q2: Create scatterplot where "protected_lands on y, gdp_percap is on x. Include title and labels on axises
+# Q2: Create scatterplot where protected_lands is on y,
+# gdp_percap is on x. Include title and axis labels
+
+plot(data$gdp_percap, data$protected_lands,
+     main = "Protected Lands and GDP Per Capita",
+     xlab = "GDP Per Capita",
+     ylab = "Protected Lands",
+     pch = 16)
 
 
-# Q3: Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Include title and labels on axises
+# Q3: Create scatterplot where protected_lands is on y,
+# tot_gdp_billions is on x. Include title and axis labels
+
+plot(data$tot_gdp_billions, data$protected_lands,
+     main = "Protected Lands and Total GDP",
+     xlab = "Total GDP (Billions)",
+     ylab = "Protected Lands",
+     pch = 16)
 
 
 # Q4: Regress protected_lands on gdp_percap
 
+model1 <- lm(protected_lands ~ gdp_percap, data = data)
 
-# Q5: Create scatterplot where protected_lands on y, gdp_percap is on x. Include title and labels on axises
+summary(model1)
+
+
+# Q5: Create scatterplot where protected_lands is on y,
+# gdp_percap is on x and overlay with best fit line
+
+plot(data$gdp_percap, data$protected_lands,
+     main = "Protected Lands and GDP Per Capita",
+     xlab = "GDP Per Capita",
+     ylab = "Protected Lands",
+     pch = 16)
+
+abline(model1, col = "blue", lwd = 2)
 
 
 # Q6: Regress protected_lands on tot_gdp_billions
 
+model2 <- lm(protected_lands ~ tot_gdp_billions, data = data)
 
-# Q7: Create scatterplot where protected_lands on y, tot_gdp_billions is on x. Overlay plot with best fit line
+summary(model2)
 
 
+# Q7: Create scatterplot where protected_lands is on y,
+# tot_gdp_billions is on x. Overlay plot with best fit line
+
+plot(data$tot_gdp_billions, data$protected_lands,
+     main = "Protected Lands and Total GDP",
+     xlab = "Total GDP (Billions)",
+     ylab = "Protected Lands",
+     pch = 16)
+
+abline(model2, col = "red", lwd = 2)
 ```
 
 
