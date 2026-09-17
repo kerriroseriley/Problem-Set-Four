@@ -1,10 +1,8 @@
-# Problem Set Four
-Week Four Problem Set
+# Week Four Problem Set
 Author: Kerri Riley
+
+
 PAI741: Data Wrangling and Visualizations
-
-# DWV Assignment 4
-
 This repository contains my work for DWV Assignment 4.
 
 
