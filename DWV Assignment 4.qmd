@@ -1,23 +1,36 @@
 ---
 title: "DWV Assignment 4"
-format: html
+format:
+  html:
+    embed-resources: true 
+  docx: default
 ---
 
 ## Part One: Lines
 ```{r}
 
+# Load ggplot2 for creating graphs
 library(ggplot2)
+
+# Load dplyr for working with and summarizing data
 library(dplyr)
 
 # Q1, Q2, Q3
+# Create the plot
 ggplot() +
+  
+  # Draw tje line and make it purple and dashed
   geom_abline(intercept = 3, slope = 4,
               color = "purple",
               linetype = "dashed") +
   annotate("text", x = 2, y = 15,
            label = "y = 4x + 3") +
+  # Sets the x-axis from -20 to 20
   xlim(-20, 20) +
+  
+  # Set the y-axis from -20 to 20
   ylim(-20, 20) +
+  # Adds a title and axis laabels
   labs(
     title = "Line: y = 4x + 3",
     x = "x",
@@ -91,7 +104,7 @@ plot(data$gdp_percap, data$protected_lands,
      pch = 16)
 
 abline(model1, col = "blue", lwd = 2)
-
+ 
 
 # Q6: Regress protected_lands on tot_gdp_billions
 
@@ -99,7 +112,7 @@ model2 <- lm(protected_lands ~ tot_gdp_bilions, data = data)
 
 summary(model2)
 
-
+ 
 # Q7: Create scatterplot where protected_lands is on y,
 # tot_gdp_billions is on x. Overlay plot with best fit line
 
